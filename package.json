@@ -6,7 +6,7 @@
     "start": "npm run build && npm run copy-package-to-demo-node-modules && ng serve",
     "copy-package-to-demo-node-modules": "rm -rf node_modules/%npm_package_name% && mkdir \"node_modules/%npm_package_name%\" && cp -r dist/* node_modules/%npm_package_name%",
     "copy-to-dist": "cp README.md dist",
-    "build": "ng-packagr -p src/package.json && npm run copy-to-dist",
+  "build": "ng-packagr -p src/ng-package.json && npm run copy-to-dist",
     "build-demo-site": "npm run build && ng build --configuration production --base-href \"https://milestechnologies.github.io/ngx-keyboard-shortcuts/\" && rm -rf docs && cp -R demo-dist docs",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "ng test --karma-config karma.conf.js --browsers ChromeHeadlessNoSandbox --watch=false --code-coverage",
