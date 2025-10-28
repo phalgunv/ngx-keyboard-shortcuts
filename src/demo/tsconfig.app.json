@@ -15,7 +15,10 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-keyboard-shortcuts": ["../../node_modules/ngx-keyboard-shortcuts"]
+    }
   },
   "files": [
     "main.ts",
