@@ -36,6 +36,8 @@ describe('KeyboardShortcutDirective', () => {
     let component: TestKeyboardShortcutDirectiveComponent;
 
     beforeEach(waitForAsync(() => {
+        // Ensure a fresh TestBed for each test to avoid state leaking between tests
+        TestBed.resetTestingModule();
         TestBed.configureTestingModule({
             declarations: [
                 TestKeyboardShortcutDirectiveComponent,

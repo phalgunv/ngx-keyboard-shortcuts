@@ -9,10 +9,14 @@ import {
     platformBrowserDynamicTesting
 } from '@angular/platform-browser-dynamic/testing';
 
-// First, initialize the Angular testing environment.
-getTestBed().initTestEnvironment(
-    BrowserDynamicTestingModule,
-    platformBrowserDynamicTesting(), {
-    teardown: { destroyAfterEach: false }
+// When running under Jest, jest-preset-angular's setup already initializes
+// the testing environment. Skip the Karma bootstrap to avoid double-init.
+if (!process.env.JEST_WORKER_ID) {
+    // First, initialize the Angular testing environment.
+    getTestBed().initTestEnvironment(
+        BrowserDynamicTestingModule,
+        platformBrowserDynamicTesting(), {
+        teardown: { destroyAfterEach: false }
+    }
+    );
 }
-);

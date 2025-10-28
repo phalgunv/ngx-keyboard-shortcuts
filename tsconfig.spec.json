@@ -1,7 +1,10 @@
 {
   "extends": "./src/test/tsconfig.spec.json",
   "compilerOptions": {
-    "outDir": "./out-tsc/spec"
+    "outDir": "./out-tsc/spec",
+    "emitDecoratorMetadata": true,
+    "esModuleInterop": true,
+    "module": "commonjs"
   },
   "include": [
     "src/**/*.spec.ts",
