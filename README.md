@@ -1,10 +1,29 @@
 # Keyboard Shortcuts
 
-[![Build Status](https://dev.azure.com/milestechnologies/ngx-keyboard-shortcuts/_apis/build/status/milestechnologies.ngx-keyboard-shortcuts?branchName=master)](https://dev.azure.com/milestechnologies/ngx-keyboard-shortcuts/_build/latest?definitionId=1&branchName=master) [![codecov](https://codecov.io/gh/milestechnologies/ngx-keyboard-shortcuts/branch/master/graph/badge.svg)](https://codecov.io/gh/milestechnologies/ngx-keyboard-shortcuts) [![Greenkeeper badge](https://badges.greenkeeper.io/milestechnologies/ngx-keyboard-shortcuts.svg)](https://greenkeeper.io/)
+[![Build Status](https://dev.azure.com/milestechnologies/ngx-keyboard-shortcuts/_apis/build/status/milestechnologies.ngx-keyboard-shortcuts?branchName=master)](https://dev.azure.com/milestechnologies/ngx-keyboard-shortcuts/_build/latest?definitionId=1&branchName=master) [![codecov](https://codecov.io/gh/milestechnologies/ngx-keyboard-shortcuts/branch/master/graph/badge.svg)](https://codecov.io/gh/milestechnologies/ngx-keyboard-shortcuts) [![npm version](https://badge.fury.io/js/ngx-keyboard-shortcuts.svg)](https://www.npmjs.com/package/ngx-keyboard-shortcuts)
 
-By using simple directives ngx-keyboard-shortcuts allows you to create and implement custom keybindings events in your angular applications.
+By using simple directives ngx-keyboard-shortcuts allows you to create and implement custom keybindings events in your Angular applications.
 
-**For Example**:
+## Requirements
+
+- **Angular**: 16+ (for v2.x)
+- **Node.js**: 18+ 
+- **TypeScript**: 5.x
+
+> **Note**: For Angular 10-15, use v1.x of this package.
+
+## Installation
+
+```bash
+## Installation
+
+```bash
+npm install ngx-keyboard-shortcuts --save
+```
+
+## Quick Start
+
+**Example:**
 
 ```html
 <button [keyboardShortcut]="keyboardShortcutDef" (click)="save()">
@@ -19,19 +38,25 @@ keyboardShortcutDef: IKeyboardShortcutListenerOptions = {
 };
 ```
 
-### Install
-
-`npm --save install ngx-keyboard-shortcuts`.
-
 ### Usage
 
 ```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { NgxKeyboardShortcutModule } from 'ngx-keyboard-shortcuts';
 
+import { AppComponent } from './app.component';
+
 @NgModule({
-    imports: [NgxKeyboardShortcutModule.forRoot()]
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    NgxKeyboardShortcutModule.forRoot()
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
 ```
 
 ### Demos
@@ -40,24 +65,45 @@ see the demo site [https://milestechnologies.github.io/ngx-keyboard-shortcuts](h
 
 ## Contributing
 
-### Commands
+### Development Setup
 
-`npm start` Run the demo environment
+```bash
+npm install
+npm start  # Run the demo environment
+```
 
-`npm test` Run tests
+### Testing and Linting
 
-`npm run lint` Run linter
+```bash
+npm test        # Run Jest tests
+npm run lint    # Run ESLint
+```
 
-`npm run build` Build the package
+### Building
+
+```bash
+npm run build   # Build the library package
+```
 
 ## Built With
 
--   [Angular](https://angular.io/) - The web framework used
--   [Npm](https://www.npmjs.com/get-npm) - The package manager
+-   [Angular 16](https://angular.io/) - The web framework
+-   [TypeScript 5](https://www.typescriptlang.org/) - Programming language
+-   [Jest](https://jestjs.io/) - Testing framework
+-   [ESLint](https://eslint.org/) - Code quality tool
 
 ## Version
 
-1.0.1
+2.0.0-beta.3
+
+## Migration from v1.x
+
+If you're upgrading from v1.x:
+- Angular 16+ is now required
+- Node.js 18+ is required
+- Peer dependencies updated to `@angular/core` and `@angular/common` ^16.0.0
+
+For detailed migration information, see [CHANGELOG.md](./CHANGELOG.md).
 
 ## Contributors
 
