@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { async, TestBed } from '@angular/core/testing';
+import { TestBed, waitForAsync } from '@angular/core/testing';
 import {} from 'jasmine';
 
 import { KeyboardShortcutService } from '../keyboard-shortcut.service';
@@ -11,7 +11,7 @@ import {
 describe('KeyboardShortcutService', () => {
     let service: KeyboardShortcutService;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
         TestBed.configureTestingModule({
             declarations: [],
             imports: [BrowserModule],
