@@ -5,7 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [2.0.0-beta.3] - 2025-10-28
+## Versioning Strategy
+
+Starting with v16.0.0, this package follows **Angular's major version numbering**:
+- `16.x.x` - Compatible with Angular 16+
+- `17.x.x` - Compatible with Angular 17+ (future)
+- `18.x.x` - Compatible with Angular 18+ (future)
+
+This makes it easy to identify which version of the package supports your Angular version.
+
+## [16.0.0-beta.1] - 2025-10-28
 
 ### 🎉 Major Version - Angular 16+ Migration
 
@@ -13,12 +22,19 @@ This is a major version update that migrates the library to Angular 16+ with mod
 
 > **📦 Package Name Change**: This package is now published as **`@phalgunv/ngx-keyboard-shortcuts`** (was `ngx-keyboard-shortcuts`). This is a maintained fork of the [original archived repository](https://github.com/milestechnologies/ngx-keyboard-shortcuts).
 
+> **🔢 Versioning Change**: Starting with this release, the package version aligns with Angular's major version. Version `16.x.x` indicates Angular 16+ compatibility.
+
 ### ⚠️ BREAKING CHANGES
 
 #### Package Name
 - **New package name**: `@phalgunv/ngx-keyboard-shortcuts` (scoped package)
 - **Installation**: `npm install @phalgunv/ngx-keyboard-shortcuts`
 - **Import**: `import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';`
+
+#### Versioning Strategy
+- **New versioning**: Package major version now matches Angular major version
+- **v16.x.x**: Supports Angular 16+
+- **Previous v2.0.0-beta.3**: Deprecated in favor of aligned versioning
 
 #### Minimum Requirements Updated 
   - `@angular/core`: ^16.0.0
@@ -79,7 +95,9 @@ This is a major version update that migrates the library to Angular 16+ with mod
 
 3. **Install the package**:
    ```bash
-   npm install @phalgunv/ngx-keyboard-shortcuts@2.0.0-beta.3
+   npm install @phalgunv/ngx-keyboard-shortcuts@16.0.0-beta.1
+   # or
+   npm install @phalgunv/ngx-keyboard-shortcuts@beta
    ```
 
 4. **Update imports** in your code:
@@ -117,6 +135,13 @@ This is a major version update that migrates the library to Angular 16+ with mod
 
 ---
 
-## [1.0.1] - Previous Release
+## Version History
 
-See Git history for details on v1.x releases.
+### [16.0.0-beta.1] - 2025-10-28
+First beta release with Angular 16+ support and aligned versioning.
+
+### [2.0.0-beta.3] - 2025-10-28 (Deprecated)
+Previous version before adopting Angular-aligned versioning. Use 16.0.0-beta.1 instead.
+
+### [1.0.1] - Previous Release
+See Git history for details on v1.x releases (Angular 10-15 support).

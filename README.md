@@ -6,13 +6,21 @@
 
 By using simple directives ngx-keyboard-shortcuts allows you to create and implement custom keybindings events in your Angular applications.
 
+## Versioning
+
+This package follows **Angular's major version numbering**:
+- **v16.x.x** - Compatible with Angular 16+
+- **v17.x.x** - Compatible with Angular 17+ (future)
+
+This makes it easy to identify which version supports your Angular version.
+
 ## Requirements
 
-- **Angular**: 16+ (for v2.x)
+- **Angular**: 16+ (for v16.x)
 - **Node.js**: 18+ 
 - **TypeScript**: 5.x
 
-> **Note**: For Angular 10-15, use v1.x of this package.
+> **Note**: For Angular 10-15, use v1.x of the original package.
 
 ## Installation
 
