@@ -1,9 +1,9 @@
 module.exports = {
-  preset: 'ng-jest/presets/defaults',
+  preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(ts|js|html)$': ['ts-jest', { tsconfig: 'tsconfig.spec.json' }]
+    '^.+\\.(ts|js|html)$': ['ts-jest']
   },
   moduleFileExtensions: ['ts', 'html', 'js', 'json'],
   testPathIgnorePatterns: ['/dist/', '/node_modules/'],
@@ -11,5 +11,4 @@ module.exports = {
   moduleNameMapper: {
     '^ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts'
   }
-};
 };
