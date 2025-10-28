@@ -12,4 +12,8 @@ module.exports = {
   testPathIgnorePatterns: ['/dist/','/node_modules/']
   ,
   modulePathIgnorePatterns: ['/dist/']
+  ,
+  moduleNameMapper: {
+    '^ngx-keyboard-shortcuts$': '<rootDir>/package.json'
+  }
 };
