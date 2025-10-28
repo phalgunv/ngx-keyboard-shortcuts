@@ -1,19 +1,15 @@
 module.exports = {
-  preset: 'jest-preset-angular',
+  preset: 'ng-jest/presets/defaults',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(ts|js|html)$': ['ts-jest', {
-      tsconfig: 'tsconfig.spec.json',
-      stringifyContentPathRegex: '\\.(html|svg)$'
-    }]
+    '^.+\\.(ts|js|html)$': ['ts-jest', { tsconfig: 'tsconfig.spec.json' }]
   },
   moduleFileExtensions: ['ts', 'html', 'js', 'json'],
-  testPathIgnorePatterns: ['/dist/','/node_modules/']
-  ,
-  modulePathIgnorePatterns: ['/dist/']
-  ,
+  testPathIgnorePatterns: ['/dist/', '/node_modules/'],
+  modulePathIgnorePatterns: ['/dist/'],
   moduleNameMapper: {
-    '^ngx-keyboard-shortcuts$': '<rootDir>/package.json'
+    '^ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts'
   }
+};
 };
