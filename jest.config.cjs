@@ -10,4 +10,6 @@ module.exports = {
   },
   moduleFileExtensions: ['ts', 'html', 'js', 'json'],
   testPathIgnorePatterns: ['/dist/','/node_modules/']
+  ,
+  modulePathIgnorePatterns: ['/dist/']
 };
