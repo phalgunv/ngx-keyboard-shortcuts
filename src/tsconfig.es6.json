@@ -17,8 +17,8 @@
         "annotateForClosureCompiler": true,
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true,
-        "flatModuleOutFile": "ngx-keyboard-shortcuts.js",
-        "flatModuleId": "ngx-keyboard-shortcuts"
+        "flatModuleOutFile": "@phalgunv/ngx-keyboard-shortcuts.js",
+        "flatModuleId": "@phalgunv/ngx-keyboard-shortcuts"
     },
     "files": ["./index.ts"]
 }

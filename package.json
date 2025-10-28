@@ -1,5 +1,5 @@
 {
-  "name": "ngx-keyboard-shortcuts",
+  "name": "@phalgunv/ngx-keyboard-shortcuts",
   "version": "2.0.0-beta.3",
   "private": true,
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/milestechnologies/ngx-keyboard-shortcuts"
+    "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts"
   },
   "author": {
     "name": "milesdevservices",
@@ -38,7 +38,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/milestechnologies/ngx-keyboard-shortcuts/issues"
+    "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts/issues"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^16.2.16",

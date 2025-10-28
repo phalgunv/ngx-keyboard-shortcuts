@@ -1,6 +1,8 @@
-# Keyboard Shortcuts
+# @phalgunv/ngx-keyboard-shortcuts
 
-[![Build Status](https://dev.azure.com/milestechnologies/ngx-keyboard-shortcuts/_apis/build/status/milestechnologies.ngx-keyboard-shortcuts?branchName=master)](https://dev.azure.com/milestechnologies/ngx-keyboard-shortcuts/_build/latest?definitionId=1&branchName=master) [![codecov](https://codecov.io/gh/milestechnologies/ngx-keyboard-shortcuts/branch/master/graph/badge.svg)](https://codecov.io/gh/milestechnologies/ngx-keyboard-shortcuts) [![npm version](https://badge.fury.io/js/ngx-keyboard-shortcuts.svg)](https://www.npmjs.com/package/ngx-keyboard-shortcuts)
+> ⚠️ **Maintained Fork**: This is an actively maintained fork of the original [`ngx-keyboard-shortcuts`](https://github.com/milestechnologies/ngx-keyboard-shortcuts) package (now archived). This fork adds Angular 16+ support with modern tooling.
+
+[![npm version](https://badge.fury.io/js/%40phalgunv%2Fngx-keyboard-shortcuts.svg)](https://www.npmjs.com/package/@phalgunv/ngx-keyboard-shortcuts)
 
 By using simple directives ngx-keyboard-shortcuts allows you to create and implement custom keybindings events in your Angular applications.
 
@@ -18,7 +20,7 @@ By using simple directives ngx-keyboard-shortcuts allows you to create and imple
 ## Installation
 
 ```bash
-npm install ngx-keyboard-shortcuts --save
+npm install @phalgunv/ngx-keyboard-shortcuts --save
 ```
 
 ## Quick Start
@@ -43,7 +45,7 @@ keyboardShortcutDef: IKeyboardShortcutListenerOptions = {
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxKeyboardShortcutModule } from 'ngx-keyboard-shortcuts';
+import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';
 
 import { AppComponent } from './app.component';
 

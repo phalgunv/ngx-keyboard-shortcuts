@@ -7,12 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [2.0.0-beta.3] - 2025-10-28
 
-### Breaking Changes
+### 🎉 Major Version - Angular 16+ Migration
 
-- **Angular 16+ Required**: Upgraded to Angular 16.2.12. The library now requires Angular 16.0.0 or higher.
-- **Node.js 18+ Required**: Minimum Node.js version is now 18.x.
-- **TypeScript 5.x Required**: Upgraded to TypeScript 5.1.6 for Angular 16 compatibility.
-- **Peer Dependencies Updated**: 
+This is a major version update that migrates the library to Angular 16+ with modern tooling.
+
+> **📦 Package Name Change**: This package is now published as **`@phalgunv/ngx-keyboard-shortcuts`** (was `ngx-keyboard-shortcuts`). This is a maintained fork of the [original archived repository](https://github.com/milestechnologies/ngx-keyboard-shortcuts).
+
+### ⚠️ BREAKING CHANGES
+
+#### Package Name
+- **New package name**: `@phalgunv/ngx-keyboard-shortcuts` (scoped package)
+- **Installation**: `npm install @phalgunv/ngx-keyboard-shortcuts`
+- **Import**: `import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';`
+
+#### Minimum Requirements Updated 
   - `@angular/core`: ^16.0.0
   - `@angular/common`: ^16.0.0
 
@@ -71,12 +79,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 3. **Install the package**:
    ```bash
-   npm install ngx-keyboard-shortcuts@2.0.0-beta.3
+   npm install @phalgunv/ngx-keyboard-shortcuts@2.0.0-beta.3
    ```
 
-4. **No API Changes**: The library API remains backward compatible. Your existing usage should continue to work without code changes.
+4. **Update imports** in your code:
+   ```typescript
+   // OLD:
+   import { NgxKeyboardShortcutModule } from 'ngx-keyboard-shortcuts';
+   
+   // NEW:
+   import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';
+   ```
 
-#### For Contributors/Developers:
+5. **No other API changes**: The library API remains backward compatible. Once you update the import, your existing code will work without modifications.
+
+#### Original Package Users
 
 1. **Install Dependencies**:
    ```bash

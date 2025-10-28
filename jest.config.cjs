@@ -19,6 +19,6 @@ module.exports = {
   testPathIgnorePatterns: ['/dist/', '/node_modules/', '<rootDir>/src/test/test.ts', '<rootDir>/src/test/app.spec.ts'],
   modulePathIgnorePatterns: ['/dist/'],
   moduleNameMapper: {
-    '^ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts'
+    '^@phalgunv/ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts'
   }
 };

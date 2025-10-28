@@ -1,9 +1,9 @@
 {
-    "name": "ngx-keyboard-shortcuts",
+    "name": "@phalgunv/ngx-keyboard-shortcuts",
     "version": "2.0.0-beta.3",
     "repository": {
         "type": "git",
-        "url": "https://github.com/milestechnologies/ngx-keyboard-shortcuts"
+        "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts"
     },
     "description": "Keyboard-shortcuts for creating and implementing keyboard events in Angular apps.",
     "homepage": "https://github.com/milestechnologies",
@@ -20,8 +20,7 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/milestechnologies/ngx-keyboard-shortcuts/issues",
-        "email": "oss@milestechnologies.com"
+        "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts/issues"
     },
     "ngPackage": {
         "lib": {

@@ -17,7 +17,7 @@
       "dom"
     ],
     "paths": {
-      "ngx-keyboard-shortcuts": ["../../node_modules/ngx-keyboard-shortcuts"]
+      "@phalgunv/ngx-keyboard-shortcuts": ["../../node_modules/@phalgunv/ngx-keyboard-shortcuts"]
     }
   },
   "files": [
