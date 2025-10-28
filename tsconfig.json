@@ -1,14 +1,18 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src",
-        "experimentalDecorators": true,
-        "importHelpers": true,
-        "moduleResolution": "node",
-        "rootDir": "./src",
-        "target": "es2018",
-        "lib": ["es6", "dom"],
-        "skipLibCheck": true,
-        "types": [],
-        "module": "es2020"
+      "baseUrl": "./src",
+      "experimentalDecorators": true,
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "rootDir": "./src",
+      "target": "ES2022",
+      "lib": [
+        "es6",
+        "dom"
+      ],
+      "skipLibCheck": true,
+  "types": ["node"],
+      "module": "es2020",
+      "useDefineForClassFields": false
     }
 }

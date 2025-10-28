@@ -34,7 +34,7 @@
     "jsnext:main": "ngx-keyboard-shortcuts.js",
     "typings": "ngx-keyboard-shortcuts.d.ts",
     "peerDependencies": {
-        "@angular/core": "^10.2.1",
-        "@angular/common": "^10.2.1"
+        "@angular/core": "^16.0.0",
+        "@angular/common": "^16.0.0"
     }
 }

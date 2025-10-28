@@ -10,3 +10,6 @@ import { KeyboardShortcutDirective } from './keyboard-shortcut.directive';
     imports: [CommonModule]
 })
 export class NgxKeyboardShortcutModule {}
+
+// Re-export public API so the entrypoint exposes all symbols
+export * from './public_api';

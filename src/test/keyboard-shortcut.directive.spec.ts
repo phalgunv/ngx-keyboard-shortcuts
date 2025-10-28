@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { async, TestBed, ComponentFixture } from '@angular/core/testing';
+import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import {} from 'jasmine';
 
 import { KeyboardShortcutService } from '../keyboard-shortcut.service';
@@ -35,7 +35,9 @@ describe('KeyboardShortcutDirective', () => {
     let fixture: ComponentFixture<TestKeyboardShortcutDirectiveComponent>;
     let component: TestKeyboardShortcutDirectiveComponent;
 
-    beforeEach(async(() => {
+    beforeEach(waitForAsync(() => {
+        // Ensure a fresh TestBed for each test to avoid state leaking between tests
+        TestBed.resetTestingModule();
         TestBed.configureTestingModule({
             declarations: [
                 TestKeyboardShortcutDirectiveComponent,
@@ -55,7 +57,7 @@ describe('KeyboardShortcutDirective', () => {
     // ================================================
 
     describe(':: testing shortcut', () => {
-        beforeEach(async(() => {
+        beforeEach(waitForAsync(() => {
             fixture.detectChanges();
         }));
 
