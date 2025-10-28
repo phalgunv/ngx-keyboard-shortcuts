@@ -7,6 +7,7 @@ trigger:
     - master
     - develop
     - greenkeeper/*
+    - migration/*
 
 pool:
     vmImage: 'ubuntu-latest'
