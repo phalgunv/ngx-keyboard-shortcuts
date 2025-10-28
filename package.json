@@ -6,7 +6,7 @@
     "start": "npm run build && npm run copy-package-to-demo-node-modules && ng serve",
     "copy-package-to-demo-node-modules": "rm -rf node_modules/%npm_package_name% && mkdir \"node_modules/%npm_package_name%\" && cp -r dist/* node_modules/%npm_package_name%",
     "copy-to-dist": "cp README.md dist",
-  "build": "ng-packagr -p src/ng-package.json && npm run copy-to-dist",
+    "build": "ng-packagr -p src/ng-package.json && npm run copy-to-dist",
     "build-demo-site": "npm run build && ng build --configuration production --base-href \"https://milestechnologies.github.io/ngx-keyboard-shortcuts/\" && rm -rf docs && cp -R demo-dist docs",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "ng test --karma-config karma.conf.js --browsers ChromeHeadlessNoSandbox --watch=false --code-coverage",
@@ -60,6 +60,7 @@
     "jasmine-spec-reporter": "~7.0.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "^2.2.0",
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "^2.0.0",
@@ -68,15 +69,16 @@
     "karma-spec-reporter": "^0.0.32",
     "ng-packagr": "^16.2.3",
     "ngx-highlightjs": "^4.1.2",
+    "puppeteer": "^24.26.1",
     "rxjs": "~7.8.0",
     "tslint": "~6.1.0",
-  "typescript": "5.1.6",
+    "typescript": "5.1.6",
     "zone.js": "~0.13.3"
   },
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": ">=18"
   }
 }
