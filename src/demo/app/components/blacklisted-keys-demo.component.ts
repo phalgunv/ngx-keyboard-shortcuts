@@ -17,7 +17,7 @@ export class BlacklistedShortcutsComponent implements OnDestroy {
 
     ngOnDestroy(): void {
         // destroys all the listeners when the component is destroyed
-        for (let i of this.listeners) {
+        for (const i of this.listeners) {
             i.listener.remove();
         }
     }

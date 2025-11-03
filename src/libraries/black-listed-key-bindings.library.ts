@@ -61,7 +61,7 @@ export class BlackListedKeyboardShortcutChecker {
 
     check(listener: IKeyboardShortcutListener): void {
         // this is where the test was deleted
-        for (let blkb of this.mappedBlackListedKeyBindings) {
+        for (const blkb of this.mappedBlackListedKeyBindings) {
             if (blkb === listener.mappedKeyboardShortcutCombination) {
                 const warningMessage = `Keyboard Shortcut [${
                     listener.displayShortcutCombination

@@ -4,7 +4,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { NgxKeyboardShortcutModule } from 'ngx-keyboard-shortcuts';
+import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';

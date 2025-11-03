@@ -84,7 +84,7 @@ export class KeyboardShortcutListener implements IKeyboardShortcutListener {
         blackListedKeyboardShortcutChecker?: BlackListedKeyboardShortcutChecker
     ) {
         // assign properties based on constructor and defaults
-        let defaultListenerOptions = {
+        const defaultListenerOptions = {
             ignoreEventsFromInputElement: false,
             passToLowerPriorities: true,
             priority: 0

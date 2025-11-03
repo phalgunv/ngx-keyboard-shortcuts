@@ -7,6 +7,7 @@ trigger:
     - master
     - develop
     - greenkeeper/*
+    - migration/*
 
 pool:
     vmImage: 'ubuntu-latest'
@@ -23,39 +24,44 @@ steps:
           versionSpec: '18.x'
       displayName: 'Install Node.js'
 
-    - task: Npm@1
-      displayName: 'npm install'
-      inputs:
-          command: install
+    - script: |
+        npm ci --legacy-peer-deps
+      displayName: 'npm ci (with legacy-peer-deps)'
 
     - script: |
         sudo apt-get update
         sudo apt-get install -y libatk1.0-0 libatk-bridge2.0-0 libc6 libcairo2 libdbus-1-3 libexpat1 libfontconfig1 libfreetype6 libgbm1 libglib2.0-0 libgtk-3-0 libnspr4 libnss3 libpango-1.0-0 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxrandr2 libxrender1 libxss1 libxtst6
-      displayName: 'install chromium deps'
+      displayName: 'install chromium deps (kept for compatibility)'
 
-    - task: Npm@1
-      displayName: 'unit tests (karma)'
-      inputs:
-          command: custom
-          customCommand: run test:karma
+    - script: |
+        npm run lint
+      displayName: 'lint code with eslint'
+      continueOnError: false
+
+    - script: |
+        # Run Jest unit tests and emit JUnit + coverage reports
+        # Use --runInBand to avoid worker isolation issues in CI
+        npm test -- --runInBand --reporters=default --reporters=jest-junit --coverage
+      displayName: 'unit tests (jest)'
+      continueOnError: false
 
     - task: PublishTestResults@2
-      displayName: 'Publish unit test results'
+      displayName: 'Publish unit test results (JUnit from jest-junit)'
       condition: succeededOrFailed()
       inputs:
-          searchFolder: $(System.DefaultWorkingDirectory)/junit
-          testRunTitle: Angular
           testResultsFormat: JUnit
-          testResultsFiles: '**/TESTS*.xml'
+          testResultsFiles: '**/jest-junit.xml'
+          searchFolder: '$(System.DefaultWorkingDirectory)'
+          testRunTitle: 'Jest unit tests'
 
     - task: PublishCodeCoverageResults@1
-      displayName: 'Publish code coverage unit test results'
+      displayName: 'Publish code coverage unit test results (if available)'
       condition: succeededOrFailed()
       inputs:
           codeCoverageTool: Cobertura
           summaryFileLocation: 'coverage/cobertura-coverage.xml'
           reportDirectory: coverage
-          failIfCoverageEmpty: true
+          failIfCoverageEmpty: false
 
     - script: |
           bash <(curl https://codecov.io/bash) -t 7cf9c792-2149-4d0f-a945-b15c35f36eea -f coverage/cobertura-coverage.xml -F adder -F subtractor

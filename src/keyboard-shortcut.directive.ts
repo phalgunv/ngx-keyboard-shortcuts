@@ -37,7 +37,7 @@ export class KeyboardShortcutDirective implements OnInit, OnDestroy {
             return;
         }
 
-        let listenerConstructor = {} as IKeyboardShortcutListenerConstructorObject;
+        const listenerConstructor = {} as IKeyboardShortcutListenerConstructorObject;
         Object.assign(
             listenerConstructor,
             { handler: this.keyboardShortcutHandler.bind(this) },

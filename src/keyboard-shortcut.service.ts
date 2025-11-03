@@ -103,7 +103,7 @@ export class KeyboardShortcutService {
             key = String.fromCharCode(parseInt(key.slice(2), 16));
         }
 
-        let parts = [<string>(KEY_MAP[key] || key)];
+        const parts = [<string>(KEY_MAP[key] || key)];
 
         if (event.altKey) {
             parts.push(KeyboardKeys.Alt);
@@ -120,12 +120,12 @@ export class KeyboardShortcutService {
 
     // handle the keyboard events for the root handler (and delegate to the listeners).
     private handleKeyboardEvent(event: KeyboardEvent): void {
-        let keyCombination = this.getKeyFromEvent(event);
-        let isInputEvent = this.isEventFromInput(event);
+        const keyCombination = this.getKeyFromEvent(event);
+        const isInputEvent = this.isEventFromInput(event);
         let handler: KeyboardShortcutHandler;
 
         // Iterate over the listeners in DESCENDING priority order.
-        for (let listener of this._listeners) {
+        for (const listener of this._listeners) {
             if (listener.mappedKeyboardShortcutCombination === keyCombination) {
                 handler = listener.handler;
 
