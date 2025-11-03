@@ -6,10 +6,10 @@
         "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts"
     },
     "description": "Keyboard-shortcuts for creating and implementing keyboard events in Angular apps.",
-    "homepage": "https://github.com/milestechnologies",
+    "homepage": "https://github.com/phalgunv/ngx-keyboard-shortcuts",
     "author": {
-        "name": "milesdevservices",
-        "email": "oss@milestechnologies.com"
+        "name": "phalgunv",
+        "url": "https://github.com/phalgunv"
     },
     "keywords": [
         "angular",
