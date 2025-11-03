@@ -9,10 +9,47 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Starting with v16.0.0, this package follows **Angular's major version numbering**:
 - `16.x.x` - Compatible with Angular 16+
-- `17.x.x` - Compatible with Angular 17+ (future)
+- `17.x.x` - Compatible with Angular 17+
 - `18.x.x` - Compatible with Angular 18+ (future)
 
 This makes it easy to identify which version of the package supports your Angular version.
+
+## [17.0.0] - 2025-11-03
+
+### 🎉 Angular 17 Support
+
+Upgraded to Angular 17.3.12 with full compatibility.
+
+#### Changed
+- Updated to Angular 17.3.12 (all @angular/* packages)
+- Updated to TypeScript 5.4.5 (Angular 17 compatible)
+- Updated to zone.js 0.14.10
+- Updated to ng-packagr 17.3.0
+- Updated to @angular-devkit/build-angular 17.3.17
+- Updated to @angular-eslint 17.5.2
+- Updated peer dependencies to Angular 17+ in published package
+- Fixed ESLint configuration (removed non-existent `prefer-inject` rule)
+
+#### Validated
+- ✅ All 18 tests passing with Angular 17
+- ✅ Library builds successfully (5.3s)
+- ✅ Demo app builds successfully
+- ✅ Zero production vulnerabilities
+- ✅ ESLint passing (1 error, 11 warnings - same as v16)
+- ✅ Backward compatible API - no breaking changes
+
+### Migration from v16.x
+
+Users upgrading from v16.x can update seamlessly:
+```bash
+# Update Angular to 17
+ng update @angular/core@17 @angular/cli@17
+
+# Update the package
+npm install @phalgunv/ngx-keyboard-shortcuts@17.0.0
+```
+
+**No code changes required** - API remains fully compatible.
 
 ## [16.0.1] - 2025-11-03
 
