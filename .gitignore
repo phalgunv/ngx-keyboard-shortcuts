@@ -5,6 +5,10 @@ coverage/*
 junit/*
 npm-debug.log
 
+# AI Generated Files (scripts, plans, documentation created by AI assistants)
+# These files are for reference only and should not be committed
+.ai-generated/*
+
 # TypeScript
 src/*.js
 src/*.map
