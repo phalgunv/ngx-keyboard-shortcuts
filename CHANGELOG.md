@@ -14,6 +14,12 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 
 This makes it easy to identify which version of the package supports your Angular version.
 
+## [16.0.1] - 2025-11-03
+
+### Changed
+- Updated author information to reflect current maintainer (phalgunv)
+- Updated homepage URL to point to active fork repository
+
 ## [16.0.0] - 2025-11-03
 
 ### 🎉 Stable Release
