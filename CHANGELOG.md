@@ -14,6 +14,21 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 
 This makes it easy to identify which version of the package supports your Angular version.
 
+## [16.0.0] - 2025-11-03
+
+### 🎉 Stable Release
+
+First stable release with Angular 16+ support!
+
+This release is production-ready with:
+- ✅ 18/18 tests passing
+- ✅ 96.63% code coverage
+- ✅ 0 production vulnerabilities
+- ✅ Modern Jest + ESLint tooling
+- ✅ Angular Package Format (APF) compliant
+
+No changes from 16.0.0-beta.1 - just marking as stable after successful beta testing.
+
 ## [16.0.0-beta.1] - 2025-10-28
 
 ### 🎉 Major Version - Angular 16+ Migration

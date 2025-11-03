@@ -1,6 +1,6 @@
 {
   "name": "@phalgunv/ngx-keyboard-shortcuts",
-  "version": "16.0.0-beta.1",
+  "version": "16.0.0",
   "private": true,
   "scripts": {
     "start": "npm run build && npm run copy-package-to-demo-node-modules && ng serve",
