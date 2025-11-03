@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';
 
@@ -26,8 +26,7 @@ export function hljsLanguages(): any {
     ];
 }
 
-@NgModule({
-    bootstrap: [AppComponent],
+@NgModule({ bootstrap: [AppComponent],
     declarations: [
         AppComponent,
         ComponentKeybindingDemoComponent,
@@ -35,28 +34,22 @@ export function hljsLanguages(): any {
         DirectiveButtonDemo,
         FooterComponent,
         HeaderComponent
-    ],
-    imports: [
-        BrowserModule,
-        HttpClientModule,
+    ], imports: [BrowserModule,
         NgxKeyboardShortcutModule,
         AppRoutingModule,
         FormsModule,
         ReactiveFormsModule,
-        HighlightModule
-    ],
-    providers: [
+        HighlightModule], providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         {
             provide: HIGHLIGHT_OPTIONS,
             useValue: {
                 languages: {
-                    typescript: () =>
-                        import('highlight.js/lib/languages/typescript'),
+                    typescript: () => import('highlight.js/lib/languages/typescript'),
                     xml: () => import('highlight.js/lib/languages/xml')
                 }
             }
-        }
-    ]
-})
+        },
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule {}

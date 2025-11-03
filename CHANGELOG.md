@@ -10,9 +10,46 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Starting with v16.0.0, this package follows **Angular's major version numbering**:
 - `16.x.x` - Compatible with Angular 16+
 - `17.x.x` - Compatible with Angular 17+
-- `18.x.x` - Compatible with Angular 18+ (future)
+- `18.x.x` - Compatible with Angular 18+
+- `19.x.x` - Compatible with Angular 19+ (future)
 
 This makes it easy to identify which version of the package supports your Angular version.
+
+## [18.0.0] - 2025-11-03
+
+### 🎉 Angular 18 Support
+
+Upgraded to Angular 18.2.14 with full compatibility.
+
+#### Changed
+- Updated to Angular 18.2.14 (all @angular/* packages)
+- Updated to TypeScript 5.5.4 (Angular 18 compatible)
+- Updated to zone.js 0.14.10
+- Updated to ng-packagr 18.2.1
+- Updated to @angular-devkit/build-angular 18.2.21
+- Updated to @angular-eslint 18.4.2
+- Updated peer dependencies to Angular 18+ in published package
+
+#### Validated
+- ✅ All 18 tests passing with Angular 18
+- ✅ Library builds successfully (3.8s)
+- ✅ Demo app builds successfully
+- ✅ Zero production vulnerabilities
+- ✅ ESLint passing (1 error, 11 warnings - same as v17)
+- ✅ Backward compatible API - no breaking changes
+
+### Migration from v17.x
+
+Users upgrading from v17.x can update seamlessly:
+```bash
+# Update Angular to 18
+ng update @angular/core@18 @angular/cli@18
+
+# Update the package
+npm install @phalgunv/ngx-keyboard-shortcuts@18.0.0
+```
+
+**No code changes required** - API remains fully compatible.
 
 ## [17.0.0] - 2025-11-03
 
