@@ -1,6 +1,6 @@
 # @phalgunv/ngx-keyboard-shortcuts
 
-> ⚠️ **Maintained Fork**: This is an actively maintained fork of the original [`ngx-keyboard-shortcuts`](https://github.com/milestechnologies/ngx-keyboard-shortcuts) package (now archived). This fork adds Angular 16+ and Angular 17+ support with modern tooling.
+> ⚠️ **Maintained Fork**: This is an actively maintained fork of the original [`ngx-keyboard-shortcuts`](https://github.com/milestechnologies/ngx-keyboard-shortcuts) package (now archived). This fork adds Angular 16+, 17+, and 18+ support with modern tooling.
 
 [![npm version](https://badge.fury.io/js/%40phalgunv%2Fngx-keyboard-shortcuts.svg)](https://www.npmjs.com/package/@phalgunv/ngx-keyboard-shortcuts)
 
@@ -11,15 +11,16 @@ By using simple directives ngx-keyboard-shortcuts allows you to create and imple
 This package follows **Angular's major version numbering**:
 - **v16.x.x** - Compatible with Angular 16+
 - **v17.x.x** - Compatible with Angular 17+
-- **v18.x.x** - Compatible with Angular 18+ (future)
+- **v18.x.x** - Compatible with Angular 18+
+- **v19.x.x** - Compatible with Angular 19+ (future)
 
 This makes it easy to identify which version supports your Angular version.
 
 ## Requirements
 
-- **Angular**: 17+ (for v17.x), 16+ (for v16.x)
+- **Angular**: 18+ (for v18.x), 17+ (for v17.x), 16+ (for v16.x)
 - **Node.js**: 18.13+ 
-- **TypeScript**: 5.4.x (for v17.x), 5.1.x (for v16.x)
+- **TypeScript**: 5.5.x (for v18.x), 5.4.x (for v17.x), 5.1.x (for v16.x)
 
 > **Note**: For Angular 10-15, use v1.x of the original package.
 
