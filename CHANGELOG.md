@@ -15,7 +15,7 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 
 This makes it easy to identify which version of the package supports your Angular version.
 
-## [18.0.0] - 2025-11-03
+## [18.0.0] - 2025-11-04
 
 ### 🎉 Angular 18 Support
 
