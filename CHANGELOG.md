@@ -11,9 +11,49 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 - `16.x.x` - Compatible with Angular 16+
 - `17.x.x` - Compatible with Angular 17+
 - `18.x.x` - Compatible with Angular 18+
-- `19.x.x` - Compatible with Angular 19+ (future)
+- `19.x.x` - Compatible with Angular 19+
 
 This makes it easy to identify which version of the package supports your Angular version.
+
+## [19.0.0] - 2025-11-04
+
+### 🎉 Angular 19 Support
+
+Upgraded to Angular 19.2.15 with full compatibility and standalone directive support.
+
+#### Changed
+- Updated to Angular 19.2.15 (all @angular/* packages)
+- Updated to TypeScript 5.6.3 (Angular 19 compatible)
+- Updated to zone.js 0.15.0
+- Updated to ng-packagr 19.2.2
+- Updated to @angular-devkit/build-angular 19.2.15
+- Updated to @angular-eslint 19.8.1
+- **Made KeyboardShortcutDirective standalone** - can now be imported directly in components
+- Updated Jest configuration with jest-preset-angular for better Angular 19 ESM support
+- Updated peer dependencies to Angular 19+ in published package
+
+#### Validated
+- ✅ All 18 tests passing with Angular 19
+- ✅ Library builds successfully (3.3s)
+- ✅ Demo app builds successfully
+- ✅ Zero production vulnerabilities
+- ✅ ESLint passing (1 error, 11 warnings - same as v18)
+- ✅ Backward compatible API - module imports still work
+
+### Migration from v18.x
+
+Users upgrading from v18.x can update seamlessly:
+```bash
+# Update Angular to 19
+ng update @angular/core@19 @angular/cli@19
+
+# Update the package
+npm install @phalgunv/ngx-keyboard-shortcuts@19.0.0
+```
+
+**Note:** The directive is now standalone. You can either:
+1. Continue using the NgxKeyboardShortcutModule (backward compatible)
+2. Import KeyboardShortcutDirective directly in standalone components
 
 ## [18.0.0] - 2025-11-04
 

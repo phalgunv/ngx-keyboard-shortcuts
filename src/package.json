@@ -1,6 +1,6 @@
 {
     "name": "@phalgunv/ngx-keyboard-shortcuts",
-    "version": "18.0.0",
+    "version": "19.0.0",
     "repository": {
         "type": "git",
         "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts"
@@ -33,7 +33,7 @@
     "jsnext:main": "ngx-keyboard-shortcuts.js",
     "typings": "ngx-keyboard-shortcuts.d.ts",
     "peerDependencies": {
-        "@angular/core": "^18.0.0",
-        "@angular/common": "^18.0.0"
+        "@angular/core": "^19.0.0",
+        "@angular/common": "^19.0.0"
     }
 }

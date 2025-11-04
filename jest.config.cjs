@@ -1,20 +1,17 @@
 module.exports = {
-  // Do not use jest-preset-angular preset to avoid transformer incompatibilities.
-  // Use ts-jest directly and initialize Angular TestBed in setup-jest.ts
-  setupFiles: ['<rootDir>/setup-reflect.ts'],
+  preset: 'jest-preset-angular',
   setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
   testEnvironment: 'jsdom',
   transform: {
-    '^.+\\.(ts|js|mjs|html)$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json', isolatedModules: false }]
+    '^.+\\.(ts|js|mjs|html|svg)$': [
+      'jest-preset-angular',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+        stringifyContentPathRegex: '\\.(html|svg)$',
+      },
+    ],
   },
-  // Transform Angular and zone.js packages inside node_modules (they ship ESM) so Jest can parse them
-  transformIgnorePatterns: ['node_modules/(?!(?:@angular|zone.js)/)'],
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-      diagnostics: false
-    }
-  },
+  transformIgnorePatterns: ['node_modules/(?!.*\\.mjs$)'],
   moduleFileExtensions: ['ts', 'html', 'js', 'mjs', 'json'],
   testPathIgnorePatterns: ['/dist/', '/node_modules/', '<rootDir>/src/test/test.ts', '<rootDir>/src/test/app.spec.ts'],
   modulePathIgnorePatterns: ['/dist/'],
