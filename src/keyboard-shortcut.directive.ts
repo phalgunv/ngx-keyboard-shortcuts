@@ -16,7 +16,8 @@ import {
 } from './libraries/listener.library';
 
 @Directive({
-    selector: '[keyboardShortcut]'
+    selector: '[keyboardShortcut]',
+    standalone: true
 })
 export class KeyboardShortcutDirective implements OnInit, OnDestroy {
     @Input() public keyboardShortcut: IKeyboardShortcutListenerOptions;

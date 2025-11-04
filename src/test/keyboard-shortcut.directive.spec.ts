@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 import { TestBed, ComponentFixture, waitForAsync } from '@angular/core/testing';
 import {} from 'jasmine';
 
@@ -11,6 +11,8 @@ import {
 } from '../libraries/listener.library';
 
 @Component({
+    standalone: true,
+    imports: [CommonModule, KeyboardShortcutDirective],
     template: `
         <a
             *ngIf="haveElement"
@@ -39,11 +41,9 @@ describe('KeyboardShortcutDirective', () => {
         // Ensure a fresh TestBed for each test to avoid state leaking between tests
         TestBed.resetTestingModule();
         TestBed.configureTestingModule({
-            declarations: [
-                TestKeyboardShortcutDirectiveComponent,
-                KeyboardShortcutDirective
+            imports: [
+                TestKeyboardShortcutDirectiveComponent
             ],
-            imports: [BrowserModule],
             providers: [KeyboardShortcutService]
         });
 

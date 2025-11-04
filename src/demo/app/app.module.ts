@@ -9,7 +9,7 @@ import { NgxKeyboardShortcutModule } from '@phalgunv/ngx-keyboard-shortcuts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentKeybindingDemoComponent } from './components/component-keybinding-demo.component';
-import { DirectiveButtonDemo } from './components/directive-button-demo.component';
+import { DirectiveButtonDemoComponent } from './components/directive-button-demo.component';
 import { BlacklistedShortcutsComponent } from './components/blacklisted-keys-demo.component';
 
 import { HighlightModule, HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
@@ -19,7 +19,7 @@ import typescript from 'highlight.js/lib/languages/typescript';
 import { FooterComponent } from './footer.component';
 import { HeaderComponent } from './header.component';
 
-export function hljsLanguages(): any {
+export function hljsLanguages(): Array<{ name: string; func: () => unknown }> {
     return [
         { name: 'typescript', func: typescript },
         { name: 'xml', func: xml }
@@ -31,7 +31,7 @@ export function hljsLanguages(): any {
         AppComponent,
         ComponentKeybindingDemoComponent,
         BlacklistedShortcutsComponent,
-        DirectiveButtonDemo,
+        DirectiveButtonDemoComponent,
         FooterComponent,
         HeaderComponent
     ], imports: [BrowserModule,
