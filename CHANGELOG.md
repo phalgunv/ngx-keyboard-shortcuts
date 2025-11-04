@@ -15,6 +15,22 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 
 This makes it easy to identify which version of the package supports your Angular version.
 
+## [19.0.1] - 2025-11-04
+
+### 🧹 Code Quality Improvements
+
+#### Fixed
+- Fixed component class suffix: `DirectiveButtonDemo` → `DirectiveButtonDemoComponent`
+- Removed unused `KeyboardShortcutService` import from module
+- Replaced all TypeScript `any` types with proper type definitions
+- Added null check for listener removal in `ngOnDestroy`
+- Improved type safety in test files
+
+#### ESLint Results
+- ✅ 0 errors (down from 1)
+- ⚠️ 2 warnings (only design-related warnings remain)
+- All 18 tests passing
+
 ## [19.0.0] - 2025-11-04
 
 ### 🎉 Angular 19 Support
