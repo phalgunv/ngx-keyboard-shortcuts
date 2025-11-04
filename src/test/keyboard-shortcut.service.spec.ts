@@ -52,7 +52,7 @@ describe('KeyboardShortcutService', () => {
             it('should warn if keyBinding is black listed (CTRL + C) typed in normal order', () => {
                 spyOn(console, 'warn');
                 // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as any)._jest.clearAllMocks();
+                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
                 service.listen({
                     keyBinding: [KeyboardKeys.Ctrl, 'c'],
                     handler: () => '',
@@ -63,7 +63,7 @@ describe('KeyboardShortcutService', () => {
             it('should warn if keyBinding is black listed (CTRL + C) typed in opposite order', () => {
                 spyOn(console, 'warn');
                 // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as any)._jest.clearAllMocks();
+                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
                 service.listen({
                     keyBinding: ['c', KeyboardKeys.Ctrl],
                     handler: () => '',
@@ -74,7 +74,7 @@ describe('KeyboardShortcutService', () => {
             it('should not warn if keyBinding is not black listed (CTRL + ALT + X) typed in normal order', () => {
                 spyOn(console, 'warn');
                 // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as any)._jest.clearAllMocks();
+                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
                 service.listen({
                     keyBinding: [KeyboardKeys.Ctrl, KeyboardKeys.Alt, 'x'],
                     handler: () => '',
@@ -85,7 +85,7 @@ describe('KeyboardShortcutService', () => {
             it('should not warn if keyBinding is not black listed (CTRL + ALT + X) typed in different order', () => {
                 spyOn(console, 'warn');
                 // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as any)._jest.clearAllMocks();
+                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
                 service.listen({
                     keyBinding: [KeyboardKeys.Alt, 'x', KeyboardKeys.Ctrl],
                     handler: () => '',
@@ -96,7 +96,7 @@ describe('KeyboardShortcutService', () => {
             it('should not warn if keyBinding is not black listed (CTRL + ALT + X) typed in another different order', () => {
                 spyOn(console, 'warn');
                 // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as any)._jest.clearAllMocks();
+                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
                 service.listen({
                     keyBinding: ['x', KeyboardKeys.Alt, KeyboardKeys.Ctrl],
                     handler: () => '',

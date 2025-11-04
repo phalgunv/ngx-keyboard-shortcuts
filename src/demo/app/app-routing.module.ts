@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { DirectiveButtonDemo } from './components/directive-button-demo.component';
+import { DirectiveButtonDemoComponent } from './components/directive-button-demo.component';
 import { BlacklistedShortcutsComponent } from './components/blacklisted-keys-demo.component';
 import { ComponentKeybindingDemoComponent } from './components/component-keybinding-demo.component';
 
@@ -11,7 +11,7 @@ const appRoutes: Routes = [
         path: 'component-keybinding-demo'
     },
     {
-        component: DirectiveButtonDemo,
+        component: DirectiveButtonDemoComponent,
         path: 'directive-button-demo'
     },
     {

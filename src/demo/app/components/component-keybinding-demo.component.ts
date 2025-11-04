@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import {
     KeyboardShortcutService,
     IKeyboardShortcutListenerConstructorObject,
+    IListenerHandle,
     KeyboardKeys,
     KeyboardShortcutCombination
 } from '../../../../dist';
@@ -33,7 +34,7 @@ export class ComponentKeybindingDemoComponent implements OnInit, OnDestroy {
     }
     `;
     // global listener variable
-    listener: any;
+    listener: IListenerHandle | null = null;
     kb = [KeyboardKeys.Ctrl, 'm'];
     info = 'Active Keybinding [' + this.kb[0] + ' + ' + this.kb[1] + ']';
     constructor(private keyboardShortcutService: KeyboardShortcutService) {}
@@ -53,11 +54,13 @@ export class ComponentKeybindingDemoComponent implements OnInit, OnDestroy {
 
     ngOnDestroy(): void {
         // destroys the listener OnDestroy
-        this.listener.remove();
+        if (this.listener) {
+            this.listener.remove();
+        }
     }
 
     private alertMessage(): void {
-        const keyboardCombo: KeyboardShortcutCombination = this as any;
+        const keyboardCombo = this as unknown as KeyboardShortcutCombination;
         alert(
             'shortcut ' +
                 keyboardCombo[0] +

@@ -8,7 +8,7 @@ import {
     selector: 'app-directive-button-demo',
     templateUrl: './directive-button-demo.component.html'
 })
-export class DirectiveButtonDemo implements OnInit {
+export class DirectiveButtonDemoComponent implements OnInit {
     code_bit_2: string;
     code_bit_1: string;
     keyboardShortcutDef: IKeyboardShortcutListenerOptions = {
