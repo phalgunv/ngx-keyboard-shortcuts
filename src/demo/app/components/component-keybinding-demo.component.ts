@@ -37,7 +37,7 @@ export class ComponentKeybindingDemoComponent implements OnInit, OnDestroy {
     listener: IListenerHandle | null = null;
     kb = [KeyboardKeys.Ctrl, 'm'];
     info = 'Active Keybinding [' + this.kb[0] + ' + ' + this.kb[1] + ']';
-    constructor(private keyboardShortcutService: KeyboardShortcutService) {}
+    private keyboardShortcutService = inject(KeyboardShortcutService);
 
     ngOnInit(): void {
         // constructor object

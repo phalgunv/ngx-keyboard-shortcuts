@@ -17,5 +17,8 @@ module.exports = {
   modulePathIgnorePatterns: ['/dist/'],
   moduleNameMapper: {
     '^@phalgunv/ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts'
+  },
+  haste: {
+    throwOnModuleCollision: false
   }
 };

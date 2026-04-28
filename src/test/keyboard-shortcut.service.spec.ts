@@ -19,7 +19,7 @@ describe('KeyboardShortcutService', () => {
             imports: [BrowserModule],
             providers: [KeyboardShortcutService]
         });
-        service = TestBed.get(KeyboardShortcutService);
+        service = TestBed.inject(KeyboardShortcutService);
     }));
 
     // ================================================

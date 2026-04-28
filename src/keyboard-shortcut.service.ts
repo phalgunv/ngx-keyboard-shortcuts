@@ -1,4 +1,4 @@
-import { Injectable, isDevMode } from '@angular/core';
+import { Injectable, isDevMode, inject } from '@angular/core';
 import { NgZone } from '@angular/core';
 import {
     KeyboardShortcutHandler,
@@ -31,8 +31,8 @@ export class KeyboardShortcutService {
      */
     blackListedKeyboardShortcutChecker: BlackListedKeyboardShortcutChecker;
 
-    constructor(zone: NgZone) {
-        this.zone = zone;
+    constructor() {
+        this.zone = inject(NgZone);
 
         // Since we're going to create a root event-handler for the keydown event, we're
         // gonna do this outside of the NgZone. This way, we're not constantly triggering
