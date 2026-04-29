@@ -48,6 +48,12 @@ export class KeyboardShortcutDirective implements OnInit, OnDestroy {
         );
     }
 
+    public ngOnDestroy(): void {
+        if (this.listener) {
+            this.listener.remove();
+        }
+    }
+
     private keyboardShortcutHandler(event: KeyboardEvent): void {
         if (this.fireClickEventOnKeyboardShortcut) {
             if (
@@ -59,11 +65,5 @@ export class KeyboardShortcutDirective implements OnInit, OnDestroy {
             }
         }
         this.keyboardShortcutTriggered.emit(event);
-    }
-
-    public ngOnDestroy(): void {
-        if (this.listener) {
-            this.listener.remove();
-        }
     }
 }
