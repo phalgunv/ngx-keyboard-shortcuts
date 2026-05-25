@@ -1,26 +1,26 @@
-# Dependency Audit - Angular 16 Migration
+# Dependency Audit - Angular 20 Migration
 
 ## Current Status (Post-Migration)
 
 ### Core Angular Dependencies ✅
 | Package | Version | Status | Notes |
 |---------|---------|--------|-------|
-| @angular/core | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/common | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/compiler | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/platform-browser | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/platform-browser-dynamic | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/router | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/forms | ^16.2.12 | ✅ Updated | Angular 16 LTS |
-| @angular/animations | ^16.2.12 | ✅ Updated | Angular 16 LTS |
+| @angular/core | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/common | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/compiler | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/platform-browser | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/platform-browser-dynamic | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/router | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/forms | ^20.3.19 | ✅ Updated | Angular 20 |
+| @angular/animations | ^20.3.19 | ✅ Updated | Angular 20 |
 
 ### Build Tools ✅
 | Package | Version | Status | Notes |
 |---------|---------|--------|-------|
-| @angular/cli | ^16.2.16 | ✅ Updated | Angular 16 CLI |
-| @angular-devkit/build-angular | ^16.2.16 | ✅ Updated | Angular 16 build system |
-| ng-packagr | ^16.2.3 | ✅ Updated | Supports APF (Angular Package Format) |
-| typescript | 5.1.6 | ✅ Updated | Pinned for Angular 16 compatibility |
+| @angular/cli | ^20.3.19 | ✅ Updated | Angular 20 CLI |
+| @angular-devkit/build-angular | ^20.3.19 | ✅ Updated | Angular 20 build system |
+| ng-packagr | ^20.3.2 | ✅ Updated | Supports APF (Angular Package Format) |
+| typescript | 5.6.3 | ✅ Updated | Pinned for Angular 20 compatibility |
 
 ### Testing Stack ✅
 | Package | Version | Status | Notes |
@@ -42,8 +42,8 @@
 ### Peer Dependencies (Published Package) ✅
 ```json
 {
-  "@angular/core": "^16.0.0",
-  "@angular/common": "^16.0.0"
+  "@angular/core": "^20.0.0",
+  "@angular/common": "^20.0.0"
 }
 ```
 
@@ -71,7 +71,7 @@
 | ngx-highlightjs | ^4.1.2 | ⚠️ Old | May need Angular 16 compatible version |
 
 ## Node.js Version
-- **Required**: `>=18`
+-- **Required**: `>=18`
 - **Recommended**: Node.js 18 LTS or Node.js 20 LTS
 - **CI**: Azure Pipelines configured with Node 18
 
