@@ -19,8 +19,12 @@ describe('KeyboardShortcutService', () => {
             imports: [BrowserModule],
             providers: [KeyboardShortcutService]
         });
-        service = TestBed.get(KeyboardShortcutService);
+        service = TestBed.inject(KeyboardShortcutService);
     }));
+
+    afterEach(() => {
+        jest.restoreAllMocks();
+    });
 
     // ================================================
 
@@ -50,70 +54,60 @@ describe('KeyboardShortcutService', () => {
             // this BLOCK defines the tests designed to determine that order of key press does
             // does not change the result
             it('should warn if keyBinding is black listed (CTRL + C) typed in normal order', () => {
-                spyOn(console, 'warn');
-                // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
+                const warnSpy = spyOn(console, 'warn');
                 service.listen({
                     keyBinding: [KeyboardKeys.Ctrl, 'c'],
                     handler: () => '',
                     description: ''
                 });
-                expect(console.warn).toHaveBeenCalled();
+                expect(warnSpy).toHaveBeenCalled();
             });
             it('should warn if keyBinding is black listed (CTRL + C) typed in opposite order', () => {
-                spyOn(console, 'warn');
-                // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
+                const warnSpy = spyOn(console, 'warn');
                 service.listen({
                     keyBinding: ['c', KeyboardKeys.Ctrl],
                     handler: () => '',
                     description: ''
                 });
-                expect(console.warn).toHaveBeenCalled();
+                expect(warnSpy).toHaveBeenCalled();
             });
             it('should not warn if keyBinding is not black listed (CTRL + ALT + X) typed in normal order', () => {
-                spyOn(console, 'warn');
-                // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
+                const warnSpy = spyOn(console, 'warn');
                 service.listen({
                     keyBinding: [KeyboardKeys.Ctrl, KeyboardKeys.Alt, 'x'],
                     handler: () => '',
                     description: ''
                 });
-                expect(console.warn).not.toHaveBeenCalled();
+                expect(warnSpy).not.toHaveBeenCalled();
             });
             it('should not warn if keyBinding is not black listed (CTRL + ALT + X) typed in different order', () => {
-                spyOn(console, 'warn');
-                // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
+                const warnSpy = spyOn(console, 'warn');
                 service.listen({
                     keyBinding: [KeyboardKeys.Alt, 'x', KeyboardKeys.Ctrl],
                     handler: () => '',
                     description: ''
                 });
-                expect(console.warn).not.toHaveBeenCalled();
+                expect(warnSpy).not.toHaveBeenCalled();
             });
             it('should not warn if keyBinding is not black listed (CTRL + ALT + X) typed in another different order', () => {
-                spyOn(console, 'warn');
-                // clear any previous mock calls so we only assert on calls made during this test
-                (globalThis as unknown as { _jest: { clearAllMocks: () => void } })._jest.clearAllMocks();
+                const warnSpy = spyOn(console, 'warn');
                 service.listen({
                     keyBinding: ['x', KeyboardKeys.Alt, KeyboardKeys.Ctrl],
                     handler: () => '',
                     description: ''
                 });
-                expect(console.warn).not.toHaveBeenCalled();
+                expect(warnSpy).not.toHaveBeenCalled();
             });
             // end BLOCK
 
             it('should not warn because keyBinding should not match the black list due to an individual key existing more than once', () => {
-                spyOn(console, 'warn');
+                const warnSpy = spyOn(console, 'warn');
                 service.listen({
                     keyBinding: ['x', 'x', KeyboardKeys.Ctrl],
                     handler: () => '',
                     description: ''
                 });
-                expect(console.warn).not.toHaveBeenCalled();
+                expect(warnSpy).not.toHaveBeenCalled();
             });
         });
 

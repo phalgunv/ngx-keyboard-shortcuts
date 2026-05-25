@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, inject } from '@angular/core';
 import {
     KeyboardShortcutService,
     KeyboardKeys,
@@ -13,7 +13,7 @@ export class BlacklistedShortcutsComponent implements OnDestroy {
     listeners = [];
     blacklistedKeys = blacklistedKeyCombinations;
 
-    constructor(private keyboardShortcutService: KeyboardShortcutService) {}
+    private keyboardShortcutService = inject(KeyboardShortcutService);
 
     ngOnDestroy(): void {
         // destroys all the listeners when the component is destroyed

@@ -1,8 +1,8 @@
-# Angular 16+ Migration - Complete ✅
+# Angular 20+ Migration - Complete ✅
 
 ## Migration Status: **COMPLETE**
 
-All planned migration tasks have been successfully completed and validated. The library is now fully compatible with Angular 16+ and ready for production use.
+All planned migration tasks have been successfully completed and validated. The library is now fully compatible with Angular 20+ and ready for production use.
 
 ---
 
@@ -11,12 +11,12 @@ All planned migration tasks have been successfully completed and validated. The 
 ### 1. Core Angular Upgrade ✅
 - **Status**: Complete
 - **Changes**:
-  - Upgraded all `@angular/*` packages from ~10.x to 16.2.12 (LTS)
-  - Updated TypeScript from 4.x to 5.1.6
-  - Updated zone.js to 0.13.3
+  - Upgraded all `@angular/*` packages to 20.3.19 (current)
+  - Updated TypeScript to 5.6.3
+  - Updated zone.js to ~0.15.0
   - Updated RxJS to 7.8.0
-  - Applied all Angular CLI migrations via `ng update`
-- **Validation**: ✅ Library builds, ✅ Demo builds, ✅ Tests pass
+  - Applied necessary Angular CLI migrations via `ng update`
+  - **Validation**: ✅ Library builds, ✅ Demo builds, ✅ Tests pass
 
 ### 2. Testing Migration (Karma → Jest) ✅
 - **Status**: Complete
@@ -39,9 +39,9 @@ All planned migration tasks have been successfully completed and validated. The 
 - **Validation**: ✅ 0 errors, 16 warnings (all non-blocking)
 
 ### 4. Build System & Package Format ✅
-- **Status**: Complete
+-- **Status**: Complete
 - **Changes**:
-  - Upgraded `ng-packagr` to 16.2.3
+  - Upgraded `ng-packagr` to 20.3.2
   - Package now outputs Angular Package Format (APF) compliant bundles:
     - `fesm2022/` - Flat ESM bundles
     - `esm2022/` - ESM source files
@@ -157,7 +157,7 @@ npx ng build --configuration production
 ### Pull Request
 - **PR #1**: https://github.com/phalgunv/ngx-keyboard-shortcuts/pull/1
 - **Status**: Open, ready for review
-- **Branch**: `migration/angular16` → `master`
+- **Branch**: `migration/angular20` → `master`
 
 ---
 
@@ -167,10 +167,10 @@ npx ng build --configuration production
 ```json
 {
   "name": "ngx-keyboard-shortcuts",
-  "version": "2.0.0-beta.3",
+  "version": "20.0.1",
   "peerDependencies": {
-    "@angular/core": "^16.0.0",
-    "@angular/common": "^16.0.0"
+    "@angular/core": "^20.0.0",
+    "@angular/common": "^20.0.0"
   },
   "engines": {
     "node": ">=18"
@@ -242,7 +242,7 @@ npx ng build --configuration production
 ## 🎯 Breaking Changes Summary
 
 ### For Library Users
-- **Minimum Angular version**: Now requires Angular 16+ (was ~10.x)
+- **Minimum Angular version**: Now requires Angular 20+ (was ~10.x)
 - **Minimum Node.js version**: Now requires Node.js 18+ (was 12+)
 - **Peer dependencies**: `@angular/core` and `@angular/common` now `^16.0.0`
 

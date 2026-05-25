@@ -5,7 +5,8 @@ import {
     OnDestroy,
     OnInit,
     Output,
-    ElementRef
+    ElementRef,
+    inject
 } from '@angular/core';
 
 import { KeyboardShortcutService } from './keyboard-shortcut.service';
@@ -16,7 +17,7 @@ import {
 } from './libraries/listener.library';
 
 @Directive({
-    selector: '[keyboardShortcut]',
+    selector: '[ngx-keyboard-shortcut]',
     standalone: true
 })
 export class KeyboardShortcutDirective implements OnInit, OnDestroy {
@@ -24,14 +25,12 @@ export class KeyboardShortcutDirective implements OnInit, OnDestroy {
 
     @Input() public fireClickEventOnKeyboardShortcut = true;
 
-    @Output() public onKeyboardShortcut = new EventEmitter<KeyboardEvent>();
+    @Output() public keyboardShortcutTriggered = new EventEmitter<KeyboardEvent>();
 
     private listener: IListenerHandle;
 
-    public constructor(
-        private elRef: ElementRef,
-        private keyboardShortcutService: KeyboardShortcutService
-    ) {}
+    private elRef = inject(ElementRef);
+    private keyboardShortcutService = inject(KeyboardShortcutService);
 
     public ngOnInit(): void {
         if (!this.keyboardShortcut) {
@@ -49,6 +48,12 @@ export class KeyboardShortcutDirective implements OnInit, OnDestroy {
         );
     }
 
+    public ngOnDestroy(): void {
+        if (this.listener) {
+            this.listener.remove();
+        }
+    }
+
     private keyboardShortcutHandler(event: KeyboardEvent): void {
         if (this.fireClickEventOnKeyboardShortcut) {
             if (
@@ -59,12 +64,6 @@ export class KeyboardShortcutDirective implements OnInit, OnDestroy {
                 this.elRef.nativeElement.click();
             }
         }
-        this.onKeyboardShortcut.emit(event);
-    }
-
-    public ngOnDestroy(): void {
-        if (this.listener) {
-            this.listener.remove();
-        }
+        this.keyboardShortcutTriggered.emit(event);
     }
 }

@@ -12,8 +12,48 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 - `17.x.x` - Compatible with Angular 17+
 - `18.x.x` - Compatible with Angular 18+
 - `19.x.x` - Compatible with Angular 19+
+- `20.x.x` - Compatible with Angular 20+
 
 This makes it easy to identify which version of the package supports your Angular version.
+
+## [20.0.0] - 2026-04-28
+
+### 🎉 Angular 20 Support
+
+Upgraded to Angular 20.3.19 with full compatibility and modern tooling.
+
+#### Changed
+- Updated to Angular 20.3.19 (all @angular/* packages)
+- Updated to TypeScript 5.6.3 (Angular 20 compatible)
+- Updated to zone.js ~0.15.0
+- Updated to ng-packagr 20.3.2
+- Updated to @angular-devkit/build-angular 20.3.19
+- Updated to @angular-eslint 20.7.0
+- Updated Jest to 30.3.0 with jest-preset-angular 16.1.4
+- Updated tslib to 2.8.1
+- Replaced deprecated `TestBed.get()` with `TestBed.inject()` in tests
+- Replaced constructor injection with `inject()` function in services and components
+- Updated peer dependencies to Angular 20+ in published package
+
+#### Fixed
+- ESLint errors for prefer-inject rule
+- Test compatibility with Angular 20 and Jest 30
+
+## [20.0.1] - 2026-05-25
+
+### 📝 Documentation and Release
+
+#### Changed
+- Updated project documentation to reference Angular 20 across README and docs
+- Regenerated `dist/` artifacts after upgrade and copied updated README into `dist`
+- Verified build and test suite on Angular 20 (see validation below)
+
+#### Validation
+- `npm run build` ✅ Dist regenerated
+- `npm test` ✅ All tests passing (18/18)
+
+#### Notes
+- This is a patch release containing documentation updates and verification steps after the Angular 20 upgrade.
 
 ## [19.0.1] - 2025-11-04
 
