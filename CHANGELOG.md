@@ -39,6 +39,22 @@ Upgraded to Angular 20.3.19 with full compatibility and modern tooling.
 - ESLint errors for prefer-inject rule
 - Test compatibility with Angular 20 and Jest 30
 
+## [20.0.1] - 2026-05-25
+
+### 📝 Documentation and Release
+
+#### Changed
+- Updated project documentation to reference Angular 20 across README and docs
+- Regenerated `dist/` artifacts after upgrade and copied updated README into `dist`
+- Verified build and test suite on Angular 20 (see validation below)
+
+#### Validation
+- `npm run build` ✅ Dist regenerated
+- `npm test` ✅ All tests passing (18/18)
+
+#### Notes
+- This is a patch release containing documentation updates and verification steps after the Angular 20 upgrade.
+
 ## [19.0.1] - 2025-11-04
 
 ### 🧹 Code Quality Improvements

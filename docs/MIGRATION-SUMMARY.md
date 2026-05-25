@@ -167,7 +167,7 @@ npx ng build --configuration production
 ```json
 {
   "name": "ngx-keyboard-shortcuts",
-  "version": "2.0.0-beta.3",
+  "version": "20.0.1",
   "peerDependencies": {
     "@angular/core": "^20.0.0",
     "@angular/common": "^20.0.0"

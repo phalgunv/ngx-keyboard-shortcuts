@@ -107,7 +107,7 @@ npm run build   # Build the library package
 
 ## Version
 
-2.0.0-beta.3
+20.0.1
 
 ## Migration from v1.x
 
