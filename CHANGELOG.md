@@ -11,7 +11,8 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 - `16.x.x` - Compatible with Angular 16+
 - `17.x.x` - Compatible with Angular 17+
 - `18.x.x` - Compatible with Angular 18+
- `21.x.x` - Compatible with Angular 21+
+- `21.x.x` - Compatible with Angular 21+
+
 
 This makes it easy to identify which version of the package supports your Angular version.
 
