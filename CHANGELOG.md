@@ -11,10 +11,37 @@ Starting with v16.0.0, this package follows **Angular's major version numbering*
 - `16.x.x` - Compatible with Angular 16+
 - `17.x.x` - Compatible with Angular 17+
 - `18.x.x` - Compatible with Angular 18+
-- `19.x.x` - Compatible with Angular 19+
-- `20.x.x` - Compatible with Angular 20+
+ `21.x.x` - Compatible with Angular 21+
 
 This makes it easy to identify which version of the package supports your Angular version.
+
+## [21.0.0] - 2026-05-25
+
+### 🎉 Angular 21 Support
+
+Upgraded to Angular 21.2.14 with full compatibility and modern tooling.
+
+#### Changed
+- Updated to Angular 21.2.14 (all @angular/* packages)
+- Updated to ng-packagr 21.2.3
+- Updated to @angular-devkit/build-angular 21.2.12
+- Updated to @angular-eslint 21.0.0
+- Updated jest-preset-angular to 16.1.5 (latest compatible version)
+- Updated TypeScript peer dependency (5.6.3 compatible)
+- Updated peer dependencies to Angular 21+ in published package
+
+#### Fixed
+- Module resolution issues with Angular testing modules in jest.config.cjs
+- TypeScript configuration for testing modules in tsconfig.spec.json
+- CommonJS module imports in setup-jest.ts for jest-preset-angular Angular 21 compatibility
+
+#### Breaking Changes
+- **Dropped support for Angular 20 and earlier** - This is a major version bump. Library now requires Angular 21+
+
+#### Verification
+- ✅ Library builds successfully with ng-packagr 21.2.3
+- ✅ All 18 unit tests pass with Jest 30.3.0
+- ✅ Full Angular 21 compatibility verified
 
 ## [20.0.0] - 2026-04-28
 

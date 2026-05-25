@@ -1,6 +1,6 @@
 {
   "name": "@phalgunv/ngx-keyboard-shortcuts",
-  "version": "20.0.1",
+  "version": "21.0.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/phalgunv/ngx-keyboard-shortcuts"
@@ -25,21 +25,22 @@
   "main": "ngx-keyboard-shortcuts.umd.js",
   "module": "fesm2022/phalgunv-ngx-keyboard-shortcuts.mjs",
   "jsnext:main": "ngx-keyboard-shortcuts.js",
-  "typings": "index.d.ts",
+  "typings": "types/phalgunv-ngx-keyboard-shortcuts.d.ts",
   "peerDependencies": {
-    "@angular/core": "^20.0.0",
-    "@angular/common": "^20.0.0"
+    "@angular/core": "^21.0.0",
+    "@angular/common": "^21.0.0"
   },
   "exports": {
     "./package.json": {
       "default": "./package.json"
     },
     ".": {
-      "types": "./index.d.ts",
+      "types": "./types/phalgunv-ngx-keyboard-shortcuts.d.ts",
       "default": "./fesm2022/phalgunv-ngx-keyboard-shortcuts.mjs"
     }
   },
   "sideEffects": false,
+  "type": "module",
   "dependencies": {
     "tslib": "^2.3.0"
   }
