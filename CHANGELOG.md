@@ -30,6 +30,7 @@ Upgraded to Angular 21.2.14 with full compatibility and modern tooling.
 - Updated jest-preset-angular to 16.1.5 (latest compatible version)
 - Updated TypeScript peer dependency (5.6.3 compatible)
 - Updated peer dependencies to Angular 21+ in published package
+- Updated project documentation to reference Angular 21 across README and docs
 
 #### Fixed
 - Module resolution issues with Angular testing modules in jest.config.cjs
