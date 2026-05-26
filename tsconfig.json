@@ -3,7 +3,7 @@
       "baseUrl": "./src",
       "experimentalDecorators": true,
       "importHelpers": true,
-      "moduleResolution": "node",
+      "moduleResolution": "bundler",
       "rootDir": "./src",
       "target": "ES2022",
       "lib": [

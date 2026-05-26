@@ -26,12 +26,8 @@
         "lib": {
             "entryFile": "public_api.ts"
         },
-        "dest": "../dist"
+    "dest": "../dist"
     },
-    "main": "ngx-keyboard-shortcuts.umd.js",
-    "module": "ngx-keyboard-shortcuts.js",
-    "jsnext:main": "ngx-keyboard-shortcuts.js",
-    "typings": "ngx-keyboard-shortcuts.d.ts",
     "peerDependencies": {
         "@angular/core": "^21.0.0",
         "@angular/common": "^21.0.0"
