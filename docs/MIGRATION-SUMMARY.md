@@ -1,8 +1,8 @@
-# Angular 20+ Migration - Complete ✅
+# Angular 21+ Migration - Complete ✅
 
 ## Migration Status: **COMPLETE**
 
-All planned migration tasks have been successfully completed and validated. The library is now fully compatible with Angular 20+ and ready for production use.
+All planned migration tasks have been successfully completed and validated. The library is now fully compatible with Angular 21+ and ready for production use.
 
 ---
 
@@ -11,7 +11,7 @@ All planned migration tasks have been successfully completed and validated. The 
 ### 1. Core Angular Upgrade ✅
 - **Status**: Complete
 - **Changes**:
-  - Upgraded all `@angular/*` packages to 20.3.19 (current)
+  - Upgraded all `@angular/*` packages to 21.0.0 (current)
   - Updated TypeScript to 5.6.3
   - Updated zone.js to ~0.15.0
   - Updated RxJS to 7.8.0
@@ -130,7 +130,7 @@ npx ng build --configuration production
 
 ## 🔄 Git History
 
-### Branch: `migration/angular16`
+### Branch: `migration/angular21`
 
 #### Commits
 1. **Initial Jest migration** (`365d74f`)
@@ -157,7 +157,7 @@ npx ng build --configuration production
 ### Pull Request
 - **PR #1**: https://github.com/phalgunv/ngx-keyboard-shortcuts/pull/1
 - **Status**: Open, ready for review
-- **Branch**: `migration/angular20` → `master`
+- **Branch**: `migration/angular21` → `master`
 
 ---
 
@@ -167,10 +167,10 @@ npx ng build --configuration production
 ```json
 {
   "name": "ngx-keyboard-shortcuts",
-  "version": "20.0.1",
+  "version": "21.0.0",
   "peerDependencies": {
-    "@angular/core": "^20.0.0",
-    "@angular/common": "^20.0.0"
+    "@angular/core": "^21.0.0",
+    "@angular/common": "^21.0.0"
   },
   "engines": {
     "node": ">=18"
@@ -208,11 +208,11 @@ npx ng build --configuration production
 
 ### Post-Merge Recommendations
 1. **Monitor Azure Pipeline** - Verify CI build passes on the remote
-2. **Run integration tests** - Test in a real Angular 16+ application
+2. **Run integration tests** - Test in a real Angular 21+ application
 3. **Update CHANGELOG** - Document breaking changes for v2.0.0
 4. **Publish beta** - Release as `2.0.0-beta.4` for testing
 5. **Remove legacy dependencies** - Clean up Karma packages after verifying Jest CI
-6. **Update examples** - Refresh documentation examples for Angular 16
+6. **Update examples** - Refresh documentation examples for Angular 21
 
 ---
 
@@ -242,14 +242,14 @@ npx ng build --configuration production
 ## 🎯 Breaking Changes Summary
 
 ### For Library Users
-- **Minimum Angular version**: Now requires Angular 20+ (was ~10.x)
+- **Minimum Angular version**: Now requires Angular 21+ (was ~10.x)
 - **Minimum Node.js version**: Now requires Node.js 18+ (was 12+)
-- **Peer dependencies**: `@angular/core` and `@angular/common` now `^16.0.0`
+- **Peer dependencies**: `@angular/core` and `@angular/common` now `^21.0.0`
 
 ### For Contributors
 - **Test runner**: Changed from Karma to Jest
 - **Linter**: Changed from TSLint to ESLint
-- **TypeScript**: Now using TypeScript 5.1.6 (was 4.x)
+- **TypeScript**: Now using TypeScript 5.6.3
 - **Node.js**: CI requires Node 18+ (was 14+)
 
 ### No Breaking API Changes
@@ -270,9 +270,9 @@ For questions or issues:
 
 ## ✨ Summary
 
-The Angular 16+ migration is **complete and successful**. All core functionality has been validated:
+The Angular 21+ migration is **complete and successful**. All core functionality has been validated:
 
-- ✅ Library builds with Angular 16
+- ✅ Library builds with Angular 21
 - ✅ Tests pass with Jest
 - ✅ Demo application builds
 - ✅ CI pipeline configured
@@ -280,10 +280,10 @@ The Angular 16+ migration is **complete and successful**. All core functionality
 - ✅ APF-compliant package output
 - ✅ Documentation complete
 
-**The library is ready for production use with Angular 16+!** 🎉
+**The library is ready for production use with Angular 21+!** 🎉
 
 ---
 
-*Migration completed: October 28, 2025*
-*Branch: `migration/angular16`*
+*Migration completed: May 2026*
+*Branch: `migration/angular21`*
 *Status: Ready for merge*
