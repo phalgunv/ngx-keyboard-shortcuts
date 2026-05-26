@@ -4,12 +4,7 @@
     "outDir": "./out-tsc/spec",
     "emitDecoratorMetadata": true,
     "esModuleInterop": true,
-      "module": "commonjs",
-      "baseUrl": "./",
-      "paths": {
-        "@angular/core/testing": ["./node_modules/@angular/core/types/testing"],
-        "@angular/platform-browser-dynamic/testing": ["./node_modules/@angular/platform-browser-dynamic/types/testing"]
-      }
+      "module": "commonjs"
   },
   "include": [
     "src/**/*.spec.ts",

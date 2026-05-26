@@ -16,9 +16,7 @@ module.exports = {
   testPathIgnorePatterns: ['/dist/', '/node_modules/', '<rootDir>/src/test/test.ts', '<rootDir>/src/test/app.spec.ts'],
   modulePathIgnorePatterns: ['/dist/', '<rootDir>/src/package\.json$'],
   moduleNameMapper: {
-    '^@phalgunv/ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts',
-    '^@angular/core/testing$': '<rootDir>/node_modules/@angular/core/fesm2022/testing.mjs',
-    '^@angular/platform-browser-dynamic/testing$': '<rootDir>/node_modules/@angular/platform-browser-dynamic/fesm2022/testing.mjs'
+    '^@phalgunv/ngx-keyboard-shortcuts$': '<rootDir>/src/index.ts'
   },
   haste: {
     throwOnModuleCollision: false
