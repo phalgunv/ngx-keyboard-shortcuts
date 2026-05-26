@@ -34,7 +34,7 @@
 ### Runtime Dependencies ✅
 | Package | Version | Status | Notes |
 |---------|---------|--------|-------|
-| zone.js | ~0.13.3 | ✅ Updated | Angular 21 compatible |
+| zone.js | ~0.15.0 | ✅ Updated | Angular 21 compatible |
 | rxjs | ~7.8.0 | ✅ Updated | RxJS 7 for Angular 21 |
 | tslib | ^2.0.0 | ✅ Updated | TypeScript runtime helpers |
 | reflect-metadata | ^0.1.13 | ✅ Added | Required for Jest DI support |
