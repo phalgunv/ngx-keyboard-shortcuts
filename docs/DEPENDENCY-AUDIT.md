@@ -27,7 +27,7 @@
 |---------|---------|--------|-------|
 | jest | ^29.7.0 | ✅ Migrated | Replaced Karma/Jasmine |
 | ts-jest | ^29.1.0 | ✅ Added | TypeScript support for Jest |
-| jest-preset-angular | ^13.0.0 | ✅ Added | Angular 21 compatible |
+| jest-preset-angular | ^16.1.5 | ✅ Added | Angular 21 compatible |
 | jest-junit | ^12.0.1 | ✅ Added | CI reporter for Azure Pipelines |
 | @types/jest | ^29.5.3 | ✅ Added | Jest type definitions |
 
