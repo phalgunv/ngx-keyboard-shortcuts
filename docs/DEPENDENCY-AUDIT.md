@@ -71,9 +71,9 @@
 | ngx-highlightjs | ^4.1.2 | ⚠️ Old | May need Angular 21 compatible version |
 
 ## Node.js Version
--- **Required**: `>=18`
-- **Recommended**: Node.js 18 LTS or Node.js 20 LTS
-- **CI**: Azure Pipelines configured with Node 18
+-- **Required**: `>=20`
+- **Recommended**: Node.js 20 LTS or Node.js 22 LTS
+- **CI**: Azure Pipelines configured with Node 20
 
 ## Package Output Format
 The library now produces Angular Package Format (APF) compliant outputs:
@@ -131,7 +131,7 @@ npx ng build --configuration production
 
 ### For Library Users
 - **Minimum Angular version**: Now requires Angular 21+
-- **Minimum Node.js version**: Now requires Node.js 18+
+- **Minimum Node.js version**: Now requires Node.js 20+
 - **Peer dependencies updated**: `@angular/core` and `@angular/common` now ^21.0.0
 
 ### For Contributors

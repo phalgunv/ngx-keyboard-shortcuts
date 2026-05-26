@@ -52,7 +52,7 @@ All planned migration tasks have been successfully completed and validated. The 
 ### 5. CI/CD Pipeline Updates ✅
 - **Status**: Complete
 - **Changes**:
-  - Updated `azure-pipelines.yml` to Node 18
+  - Updated `azure-pipelines.yml` to Node 20
   - Configured Jest test runs with JUnit and coverage reporting
   - Added ESLint linting step
   - Added `migration/*` branches to triggers
@@ -173,7 +173,7 @@ npx ng build --configuration production
     "@angular/common": "^21.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   }
 }
 ```
@@ -243,14 +243,14 @@ npx ng build --configuration production
 
 ### For Library Users
 - **Minimum Angular version**: Now requires Angular 21+ (was ~10.x)
-- **Minimum Node.js version**: Now requires Node.js 18+ (was 12+)
+- **Minimum Node.js version**: Now requires Node.js 20+ (was 12+)
 - **Peer dependencies**: `@angular/core` and `@angular/common` now `^21.0.0`
 
 ### For Contributors
 - **Test runner**: Changed from Karma to Jest
 - **Linter**: Changed from TSLint to ESLint
 - **TypeScript**: Now using TypeScript 5.6.3
-- **Node.js**: CI requires Node 18+ (was 14+)
+- **Node.js**: CI requires Node 20+ (was 14+)
 
 ### No Breaking API Changes
 ✅ All public APIs remain unchanged

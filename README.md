@@ -21,7 +21,7 @@ This makes it easy to identify which version supports your Angular version.
 ## Requirements
 
 - **Angular**: 21+ (for v21.x), 20+ (for v20.x), 19+ (for v19.x), 18+ (for v18.x), 17+ (for v17.x), 16+ (for v16.x)
-- **Node.js**: 18.13+ 
+- **Node.js**: 20.0+ 
 - **TypeScript**: 5.6.x (for v21.x, v20.x, and v19.x), 5.5.x (for v18.x), 5.4.x (for v17.x), 5.1.x (for v16.x)
 
 > **Note**: For Angular 10-15, use v1.x of the original package.
@@ -114,7 +114,7 @@ npm run build   # Build the library package
 
 If you're upgrading from v1.x:
 - Angular 21+ is now required
-- Node.js 18+ is required
+- Node.js 20+ is required
 - Peer dependencies updated to `@angular/core` and `@angular/common` ^21.0.0
 
 For detailed migration information, see [CHANGELOG.md](./CHANGELOG.md).
