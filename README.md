@@ -22,7 +22,7 @@ This makes it easy to identify which version supports your Angular version.
 
 - **Angular**: 21+ (for v21.x), 20+ (for v20.x), 19+ (for v19.x), 18+ (for v18.x), 17+ (for v17.x), 16+ (for v16.x)
 - **Node.js**: 18.13+ 
-- **TypeScript**: 5.6.x (for v21.x and v20.x), 5.5.x (for v18.x), 5.4.x (for v17.x), 5.1.x (for v16.x)
+- **TypeScript**: 5.6.x (for v21.x, v20.x, and v19.x), 5.5.x (for v18.x), 5.4.x (for v17.x), 5.1.x (for v16.x)
 
 > **Note**: For Angular 10-15, use v1.x of the original package.
 
